@@ -7,7 +7,6 @@ import {
   MessageCircle, 
   Settings, 
   Users, 
-  Bell,
   LogOut,
   Menu,
   X
@@ -17,20 +16,23 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
-
-const navItems = [
-  { to: '/home', icon: Home, label: 'Home' },
-  { to: '/search', icon: Search, label: 'Search' },
-  { to: '/connections', icon: Users, label: 'Connections' },
-  { to: '/messages', icon: MessageCircle, label: 'Messages', badge: 3 },
-  { to: '/profile', icon: User, label: 'Profile' },
-  { to: '/settings', icon: Settings, label: 'Settings' },
-];
+import { useUnreadMessageCount, usePendingRequestCount } from '@/hooks/useNotificationCount';
 
 export const AppSidebar = () => {
   const location = useLocation();
   const { profile, logout } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
+  const { data: unreadMessages = 0 } = useUnreadMessageCount();
+  const { data: pendingRequests = 0 } = usePendingRequestCount();
+
+  const navItems = [
+    { to: '/home', icon: Home, label: 'Home' },
+    { to: '/search', icon: Search, label: 'Search' },
+    { to: '/connections', icon: Users, label: 'Connections', badge: pendingRequests },
+    { to: '/messages', icon: MessageCircle, label: 'Messages', badge: unreadMessages },
+    { to: '/profile', icon: User, label: 'Profile' },
+    { to: '/settings', icon: Settings, label: 'Settings' },
+  ];
 
   return (
     <>
