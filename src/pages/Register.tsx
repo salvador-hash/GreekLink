@@ -55,19 +55,12 @@ const Register = () => {
     });
     
     if (result.success) {
-      // Check if email confirmation is needed
-      if (result.error) {
-        toast({
-          title: "Check your email",
-          description: result.error,
-        });
-      } else {
-        toast({
-          title: "Welcome to GreekLink!",
-          description: "Your account has been created successfully.",
-        });
-        navigate('/home');
-      }
+      // Redirect to OTP verification
+      toast({
+        title: "Código enviado",
+        description: "Te hemos enviado un código de verificación a tu email.",
+      });
+      navigate('/verify-otp', { state: { email: formData.email } });
     } else {
       toast({
         title: "Registration failed",
