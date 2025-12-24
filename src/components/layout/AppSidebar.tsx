@@ -68,7 +68,7 @@ export const AppSidebar = () => {
               <span className="text-primary-foreground font-bold text-lg">Ω</span>
             </div>
             <div>
-              <h1 className="font-bold text-lg text-foreground">GreekLink</h1>
+              <h1 className="font-bold text-lg text-foreground">Grikly</h1>
               <p className="text-xs text-muted-foreground">Connect. Network. Succeed.</p>
             </div>
           </div>
