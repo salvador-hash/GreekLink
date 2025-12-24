@@ -54,12 +54,12 @@ const Search = () => {
       await sendRequest.mutateAsync(userId);
       toast({ 
         title: "Solicitud enviada", 
-        description: `Tu solicitud a ${name} ha sido enviada.` 
+        description: `Your request to ${name} has been sent.` 
       });
     } catch (error: any) {
       toast({ 
         title: "Error", 
-        description: error.message || "No se pudo enviar la solicitud",
+        description: error.message || "The request could not be sent.",
         variant: "destructive"
       });
     }
@@ -68,8 +68,8 @@ const Search = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Buscar Miembros</h1>
-        <p className="text-muted-foreground">Busca hermanos y hermanas de diferentes capítulos</p>
+        <h1 className="text-2xl font-bold text-foreground">Search Members</h1>
+        <p className="text-muted-foreground">Seek out brothers and sisters from different chapters</p>
       </div>
 
       {/* Search & Filters */}
@@ -77,7 +77,7 @@ const Search = () => {
         <div className="relative">
           <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
           <Input
-            placeholder="Buscar por nombre o universidad..."
+            placeholder="Search by name or university..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="pl-10 h-11 bg-secondary/50 border-border/50"
@@ -145,15 +145,15 @@ const Search = () => {
                   </div>
                   {status === 'connected' ? (
                     <Button size="sm" variant="secondary" className="shrink-0" disabled>
-                      <Check className="h-4 w-4 mr-1" /> Conectado
+                      <Check className="h-4 w-4 mr-1" /> Connected
                     </Button>
                   ) : status === 'pending_sent' ? (
                     <Button size="sm" variant="outline" className="shrink-0" disabled>
-                      <Clock className="h-4 w-4 mr-1" /> Pendiente
+                      <Clock className="h-4 w-4 mr-1" /> Pending
                     </Button>
                   ) : status === 'pending_received' ? (
                     <Button size="sm" variant="default" className="shrink-0" asChild>
-                      <Link to="/connections">Ver solicitud</Link>
+                      <Link to="/connections">View request</Link>
                     </Button>
                   ) : (
                     <Button 
@@ -178,7 +178,7 @@ const Search = () => {
       )}
       
       {!isLoading && filteredUsers.length === 0 && (
-        <div className="text-center py-12 text-muted-foreground">No se encontraron miembros. Intenta ajustar tu búsqueda.</div>
+        <div className="text-center py-12 text-muted-foreground">No members were found. Try adjusting your search.</div>
       )}
     </div>
   );
