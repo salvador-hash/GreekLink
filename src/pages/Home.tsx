@@ -61,7 +61,7 @@ const Home = () => {
     <div className="space-y-6 animate-fade-in">
       <div>
         <h1 className="text-2xl font-bold text-foreground">Inicio</h1>
-        <p className="text-muted-foreground">Ve qué está pasando en tu red</p>
+        <p className="text-muted-foreground">See what's happening on your network</p>
       </div>
 
       {/* Create Post */}
@@ -73,7 +73,7 @@ const Home = () => {
           </Avatar>
           <div className="flex-1">
             <Textarea
-              placeholder="Comparte algo con tu red..."
+              placeholder="Share something with your network..."
               value={newPost}
               onChange={(e) => setNewPost(e.target.value)}
               className="min-h-[80px] bg-secondary/30 border-0 resize-none"
@@ -89,7 +89,7 @@ const Home = () => {
                 ) : (
                   <Send className="h-4 w-4 mr-2" />
                 )}
-                Publicar
+                Publish
               </Button>
             </div>
           </div>
@@ -200,7 +200,7 @@ const Home = () => {
                         </AvatarFallback>
                       </Avatar>
                       <Input
-                        placeholder="Escribe un comentario..."
+                        placeholder="Share something with your network..."
                         value={commentInputs[post.id] || ''}
                         onChange={(e) => setCommentInputs(prev => ({ ...prev, [post.id]: e.target.value }))}
                         onKeyPress={(e) => {
@@ -230,7 +230,7 @@ const Home = () => {
           })
         ) : (
           <div className="text-center py-12 text-muted-foreground">
-            No hay publicaciones aún. ¡Sé el primero en compartir algo!
+            No posts yet. Be the first to share something!
           </div>
         )}
       </div>
