@@ -17,7 +17,7 @@ const Terms = () => {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">Ω</span>
             </div>
-            <span className="font-bold text-xl text-foreground">GreekLink</span>
+            <span className="font-bold text-xl text-foreground">Grikly</span>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ const Terms = () => {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground leading-relaxed">
-              By accessing and using GreekLink ("the Service"), you accept and agree to be bound by the terms 
+              By accessing and using Grikly ("the Service"), you accept and agree to be bound by the terms 
               and provisions of this agreement. If you do not agree to these terms, please do not use our Service.
             </p>
           </section>
@@ -39,7 +39,7 @@ const Terms = () => {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">2. Description of Service</h2>
             <p className="text-muted-foreground leading-relaxed">
-              GreekLink is a professional networking platform designed for members of Greek letter organizations 
+              Grikly is a professional networking platform designed for members of Greek letter organizations 
               (fraternities and sororities). The platform enables users to connect, communicate, and build 
               professional relationships with other verified members.
             </p>
@@ -77,7 +77,7 @@ const Terms = () => {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">5. Content</h2>
             <p className="text-muted-foreground leading-relaxed">
-              You retain ownership of content you post on GreekLink. By posting content, you grant us a 
+              You retain ownership of content you post on Grikly. By posting content, you grant us a 
               non-exclusive, worldwide, royalty-free license to use, display, and distribute your content 
               in connection with the Service.
             </p>
@@ -102,7 +102,7 @@ const Terms = () => {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">8. Contact</h2>
             <p className="text-muted-foreground leading-relaxed">
-              If you have questions about these Terms, please contact us at support@greeklink.com.
+              If you have questions about these Terms, please contact us at support@grikly.com.
             </p>
           </section>
         </div>
